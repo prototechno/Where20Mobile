@@ -54,7 +54,7 @@ public class GpsListener implements LocationListener {
 	}
 
 	public void onLocationChanged(Location location) {
-		Log.d(LOG_TAG, "The location has been updated!");
+		//Log.d(LOG_TAG, "The location has been updated!");
 		//owner.success(location);
 	}
 
