@@ -6,6 +6,13 @@
 			978E80A40FB7B63500B905A9 /* Where20 */,
 		);
 	};
+	28D7ACF70DDB3853001CB0EB /* Where20ViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 854}}";
+			sepNavSelRange = "{149, 0}";
+			sepNavVisRange = "{0, 1247}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 978E80A40FB7B63500B905A9 /* Where20 */;
@@ -40,12 +47,30 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 263748213;
-			PBXWorkspaceStateSaveDate = 263748213;
+			PBXPerProjectTemplateStateSaveDate = 263886858;
+			PBXWorkspaceStateSaveDate = 263886858;
+		};
+		perUserProjectItems = {
+			972518450FBA981800615E24 /* PBXBookmark */ = 972518450FBA981800615E24 /* PBXBookmark */;
+			972518460FBA981800615E24 /* PBXTextBookmark */ = 972518460FBA981800615E24 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 978E80B30FB7B64900B905A9 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	972518450FBA981800615E24 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* Where20ViewController.m */;
+	};
+	972518460FBA981800615E24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* Where20ViewController.m */;
+		name = "Where20ViewController.m: 8";
+		rLen = 0;
+		rLoc = 149;
+		rType = 0;
+		vrLen = 1247;
+		vrLoc = 0;
 	};
 	978E80A40FB7B63500B905A9 /* Where20 */ = {
 		isa = PBXExecutable;
