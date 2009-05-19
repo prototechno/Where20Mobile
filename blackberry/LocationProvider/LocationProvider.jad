@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: LocationProvider
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_locationapi
+MIDlet-Jar-Size: 4024
+MIDlet-1: ,,
+RIM-COD-Creation-Time: 1242764225
+MIDlet-Jar-URL: LocationProvider.jar
+RIM-COD-URL: LocationProvider.cod
+RIM-COD-SHA1: 3e 90 5b e2 90 0f 63 a6 84 a7 8c 6a ab e5 51 3b c3 7e 11 d9
+RIM-COD-Size: 1980
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.0
+MIDlet-Name: LocationProvider
+MIDlet-Vendor: <unknown>
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Flags-1: 0
