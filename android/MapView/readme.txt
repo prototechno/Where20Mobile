@@ -130,12 +130,42 @@ Add the button click handler to the onCreate
 		}
 	});
 
+Create Place.java
 
+	public class Place {
+		public String name = "";
+		public double lat = 0;
+		public double lng = 0;
+		public Place(String n) {
+			this.name = n;
+		}
+	}
 
+Find YQLParser.java
 
-In MapViewActivity put this code at the end of onCreate
+Now we can implement that onclick handler
 
-	barOverlay.addOverlay(new OverlayItem(new GeoPoint(49240000,-120120000), "foo", "bar"));
+	Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+	double lat = location.getLatitude();
+	double lng = location.getLongitude();
+
+	mapController.setCenter(new GeoPoint((int)(lat*1E6),(int)(lng*1E6)));
+	mapController.setZoom(13);
+
+	String request = "http://local.yahooapis.com/LocalSearchService/V3/localSearch?appid=YahooDemo&query=beer&latitude=" + String.valueOf(lat) + "&longitude=" + String.valueOf(lng) + "&radius=35&output=xml";
+	YQLParser yql = new YQLParser(request);
+	try {
+		yql.parse();
+		ArrayList<Place> response = yql.getPlaces();
+		for (int i = 0; i < response.size(); i++) {
+			Place curPlace = response.get(i);
+			int geoLat = (int)(curPlace.lat*1E6);
+			int geoLng = (int)(curPlace.lng*1E6);
+			GeoPoint barPosition = new GeoPoint(geoLat,geoLng);
+			barOverlay.addOverlay(new OverlayItem(barPosition,curPlace.name,curPlace.name));
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+	}
 	mapOverlays.add(barOverlay);
-
-Hover over OverlayItem and GeoPoint and import those classes
