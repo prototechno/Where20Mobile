@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* MapView */ = {
+		activeExec = 0;
+		executables = (
+			976AE47E0FC0FF6B003B90BA /* MapView */,
+		);
+	};
+	28D7ACF70DDB3853001CB0EB /* MapViewViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {612, 896}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 523}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 976AE47E0FC0FF6B003B90BA /* MapView */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* MapView */;
+		codeSenseManager = 976AE4870FC0FF76003B90BA /* Code sense */;
+		executables = (
+			976AE47E0FC0FF6B003B90BA /* MapView */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 264306539;
+			PBXWorkspaceStateSaveDate = 264306539;
+		};
+		perUserProjectItems = {
+			976AE4810FC0FF76003B90BA /* PBXBookmark */ = 976AE4810FC0FF76003B90BA /* PBXBookmark */;
+			976AE4910FC0FF76003B90BA /* PBXTextBookmark */ = 976AE4910FC0FF76003B90BA /* PBXTextBookmark */;
+		};
+		sourceControlManager = 976AE4860FC0FF76003B90BA /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	976AE47E0FC0FF6B003B90BA /* MapView */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MapView;
+		sourceDirectories = (
+		);
+	};
+	976AE4810FC0FF76003B90BA /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* MapViewViewController.m */;
+	};
+	976AE4860FC0FF76003B90BA /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	976AE4870FC0FF76003B90BA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	976AE4910FC0FF76003B90BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* MapViewViewController.m */;
+		name = "MapViewViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 523;
+		vrLoc = 0;
+	};
+}

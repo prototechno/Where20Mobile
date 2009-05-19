@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=320; user-scalable=no" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>PhoneGap</title>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript">
+
+	function init() {
+		navigator.geolocation.watchPosition(onPositionReady, onPositionError, {timeout:1000, frequency:10000});
+	}
+
+	function getPosition() {
+	  	navigator.geolocation.getCurrentPosition(onPositionReady, onPositionError);
+	}
+
+	function onPositionReady(position) {
+	  	document.getElementById('lat').innerHTML = position.latitude;
+	  	document.getElementById('lng').innerHTML = position.longitude;
+
+		document.getElementById('map').setAttribute('src', 'http://maps.google.com/staticmap?center='+lat+','+lng+'&zoom=14&size=320x270&maptype=mobile&markers='+position.latitude+','+position.longitude+',red&key=ABQIAAAAIuzBGtoat9nC54LTOXrGdRQx0qUyl9cucUemCIEec7My3tmmMRTJd1riFy40w28xFGe4aKBfQsRByA&sensor=false');
+	}
+
+	function onPositionError(error) {
+	}
+
+		</script>
+		<link rel="stylesheet" href="emittr.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body onload="init();">
+		<img id="map" src="about:blank">
+	</body>
+</html>

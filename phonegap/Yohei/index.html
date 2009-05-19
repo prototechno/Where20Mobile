@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+	
+		<meta name="viewport" content="width=320; user-scalable=no" />
+		<me ta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>MAP</title>
+		<link rel="stylesheet" href="assets/default.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		
+		<script type="text/javascript" 
+		src="http://www.google.com/jsapi?key=ABQIAAAAO08hSXX7JHGl17EoMILEoBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTHcIQbpZea_oOplXh_RzqTTCWvtg"></script>
+		
+		<script type="text/javascript">
+			
+			google.load("maps", "2");
+			//google.load("search", "1");
+			var map;
+			
+			function initialize() {
+				map = new google.maps.Map2(document.getElementById("map"));
+				map.setCenter(new google.maps.LatLng(37.4419, -122.1419), 13);
+				
+				//var searchControl = new google.search.SearchControl();
+				//searchControl.addSearcher(new google.search.WebSearch());
+				//searchControl.addSearcher(new google.search.NewsSearch());
+				//searchControl.draw(document.getElementById("searchcontrol"));
+			}
+			google.setOnLoadCallback(initialize);
+			
+		</script>
+		
+		<script type="text/javascript" charset="utf-8">
+			
+			function init() {
+				document.addEventListener("touchmove", preventBehavior, false);
+			}
+			
+			function getLocation() {
+				var suc = function(p){
+					map.setCenter(new google.maps.LatLng(p.latitude, p.longitude), 13);
+				};
+				var fail = function(){};
+				navigator.geolocation.getCurrentPosition(suc,fail);
+			}
+			
+			function preventBehavior(e) { 
+				e.preventDefault(); 
+			};
+			
+		</script>
+	</head>
+	
+	<body onload="init();" id="stage">
+		
+		<div class="wrapper main">
+			
+			<h2>MAP THING</h2>
+	
+			<div id="map" style="width: 248px; height: 128px"></div>
+			<!--<div id="searchcontrol"></div>-->
+			
+		</div>
+		
+		<div class="wrapper sub">
+			
+			<a class="button" href="#" onClick="getLocation();">You</a>
+			
+		</div>
+			
+	</body>
+	
+</html>
