@@ -16,7 +16,7 @@
 	
 	NSString *latlong = @"-33.874559,151.219575";
 	
-	NSString *url = [NSString stringWithFormat: @"http://maps.google.com/maps?q=%@&mrt=yp&ll=%@",
+	NSString *url = [NSString stringWithFormat: @"http://maps.google.com/maps?q=%@&near=%@",
 					 [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
 					 [latlong stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];	
 	

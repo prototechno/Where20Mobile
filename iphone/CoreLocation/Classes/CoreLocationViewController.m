@@ -43,6 +43,7 @@
     [super viewDidLoad];
 	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
 	self.locationManager.delegate = self;
+	self.locationManager.distanceFilter = 100;
 	[self.locationManager startUpdatingLocation];
 }
 
