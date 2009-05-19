@@ -4,12 +4,8 @@
 	<head>
 	
 		<meta name="viewport" content="width=320; user-scalable=no" />
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>MAP</title>
-		<link rel="stylesheet" href="assets/default.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		
+		<link rel="stylesheet" href="assets/default.css" type="text/css" media="screen" title="no title" charset="utf-8">		
 		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-		
 		<script type="text/javascript" 
 		src="http://www.google.com/jsapi?key=ABQIAAAAO08hSXX7JHGl17EoMILEoBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTHcIQbpZea_oOplXh_RzqTTCWvtg"></script>
 		
@@ -19,37 +15,27 @@
 			//google.load("search", "1");
 			var map;
 			
-			function initialize() {
+			function initializeMap() {
 				map = new google.maps.Map2(document.getElementById("map"));
 				map.setCenter(new google.maps.LatLng(37.4419, -122.1419), 13);
-				
-				//var searchControl = new google.search.SearchControl();
-				//searchControl.addSearcher(new google.search.WebSearch());
-				//searchControl.addSearcher(new google.search.NewsSearch());
-				//searchControl.draw(document.getElementById("searchcontrol"));
 			}
-			google.setOnLoadCallback(initialize);
-			
-		</script>
-		
-		<script type="text/javascript" charset="utf-8">
-			
+			google.setOnLoadCallback(initializeMap);
+
 			function init() {
-				document.addEventListener("touchmove", preventBehavior, false);
+				document.addEventListener("touchmove", function(e) {e.preventDefault();}, false);
 			}
 			
 			function getLocation() {
-				var suc = function(p){
-					map.setCenter(new google.maps.LatLng(p.latitude, p.longitude), 13);
-				};
-				var fail = function(){};
-				navigator.geolocation.getCurrentPosition(suc,fail);
+				navigator.geolocation.getCurrentPosition(success, fail);
 			}
 			
-			function preventBehavior(e) { 
-				e.preventDefault(); 
-			};
+			function success(p) {
+				map.setCenter(new google.maps.LatLng(p.latitude, p.longitude), 13);
+			}
 			
+			function fail() {
+			}
+
 		</script>
 	</head>
 	
